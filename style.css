@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: iran;
+    src: url("font/BYagut\ copy.ttf") format("opentype");
+}
+
+body {
+    direction: rtl;
+    font-family: 'iran';
+    overflow-x: hidden;
+}
+
+header{
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(28px);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.swiper {
+    width: 100%;
+    height: 105vh;
+
+
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.swiper-pagination-bullet {
+    border: 1px solid white;
+    width: 12px !important;
+    height: 12px !important;
+
+}
+
+.swiper-pagination-bullet-active {
+    background-color: white !important;
+}
+@media screen and (min-width:768px ) {
+    .seconPart {
+        background-image: url('img/1111.png');
+    }
+}
+.seconPart {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    overflow: hidden;
+}
+
+.figurePart2:hover .imgPart2 {
+    transform: scale(1.1);
+    filter: brightness(0.5);
+}
+
+.figurePart2:hover .txtPart2 {
+    color: #DF7861;
+
+}
+
+.figurePart2:hover .line {
+    background-color: #DF7861;
+    width: 70px;
+
+}
+
+.circle {
+    animation: animate 8s linear infinite;
+    z-index: 5;
+
+}
+
+.text2 {
+    position: absolute;
+    transform-origin: 0 100px;
+    color: #DF7861;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+.shop:hover figcaption{
+    transform: translateY(-138%);
+}
+.figcap,
+.popUp{
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(28px);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.shop:hover .popUp{
+    top: 0%;
+    right: 0%;
+}
+#detail{
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(28px);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}

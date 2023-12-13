@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asoudle</title>
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<style>
+</style>
+<body>
+    <nav class="w-full h-[100vh] flex justify-center content-center flex-wrap">
+        <!-- menu  -->
+        <header class="w-full h-[12vh] fixed top-0 left-0 flex justify-between z-10 duration-500" id="menu">
+            <!-- mobile header  -->
+            <div class="w-[50%] h-full flex justify-start items-center md:hidden">
+                <div class="flex w-[20%] justify-center items-center text-[#fff]" id="one">
+                    <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                        fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                    </svg>
+                </div>
+                <div class="flex w-[20%] justify-center items-center text-[#fff]" id="two">
+                    <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="currentColor" class="bi bi-basket3" viewBox="0 0 16 16">
+                        <path
+                            d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z" />
+                    </svg>
+                </div>
+                <div class="flex w-[20%] justify-center items-center text-[#fff]" id="three">
+                    <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                        <path
+                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                    </svg>
+                </div>
+                <div class="flex w-[20%] justify-center items-center text-[#fff]" id="four">
+                    <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                </div>
+            </div>
+            <div class="w-[50%] h-full flex justify-end items-center  md:hidden">
+                <figure class="w-full h-full flex justify-end items-center">
+                    <img id="logo-m-1" class="w-[70%] object-cover duration-300" src="./img/Asoodle.png" alt="">
+                    <img id="logo-m-2" class="w-[70%] object-cover duration-300" src="./img/Asoodle2.png" alt="">
+                </figure>
+            </div>
+            <!-- desktop header  -->
+            <div class="hidden md:flex w-[25%] justify-center items-center ">
+                <div class="flex w-[20%] justify-center items-center text-[#fff]" id="five">
+                    <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="currentColor" class="bi bi-basket3" viewBox="0 0 16 16">
+                        <path
+                            d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM3.394 15l-1.48-6h-.97l1.525 6.426a.75.75 0 0 0 .729.574h9.606a.75.75 0 0 0 .73-.574L15.056 9h-.972l-1.479 6h-9.21z" />
+                    </svg>
+                </div>
+                <div class="flex w-[20%] justify-center items-center text-[#fff]" id="six">
+                    <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                        <path
+                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                    </svg>
+                </div>
+                <div class="flex w-[20%] justify-center items-center text-[#fff]" id="seven">
+                    <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                    </svg>
+                </div>
+            </div>
+            <div class="hidden md:flex w-[50%] justify-center items-center ">
+                <ul class="w-full h-full flex justify-center items-center">
+                    <li class="m-4 cursor-pointer">
+                        <a class="flex justify-center items-center " href="#">
+                            <svg class="text-[#fff]" id="eight" xmlns="http://www.w3.org/2000/svg" width="18"
+                                height="18" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+                            </svg>
+                            <div class="m-1 text-[#fff] " id="nine">صفحه اصلی</div>
+                        </a>
+                    </li>
+                    <li class="m-4 cursor-pointer">
+                        <a class="flex justify-center items-center " href="shop.html">
+                            <svg class="text-[#fff]" id="four-2" xmlns="http://www.w3.org/2000/svg" width="18"
+                                height="18" fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5m2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5" />
+                            </svg>
+                            <div class="m-1 text-[#fff] " id="five-2">فروشگاه</div>
+                        </a>
+                    </li>
+                    <li class="m-4 cursor-pointer">
+                        <a class="flex justify-center items-center" href="#">
+                            <svg class="text-[#fff] " id="ten" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                                fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                            </svg>
+                            <div class="m-1 text-[#fff] " id="one-2">درباره ما</div>
+                        </a>
+                    </li>
+                    <li class="m-4 cursor-pointer">
+                        <a class="flex justify-center items-center" href="#">
+                            <svg class="text-[#fff]" id="two-2" xmlns="http://www.w3.org/2000/svg" width="18"
+                                height="18" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                            </svg>
+                            <div class="m-1 text-[#fff]" id="three-2">ارتباط با ما</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hidden md:flex w-[25%] justify-center items-center ">
+                <figure class="w-full h-full flex justify-end items-center">
+                    <img id="logo-d-1" class="w-[70%] object-cover duration-300" src="./img/Asoodle.png" alt="">
+                    <img id="logo-d-2" class="w-[70%] object-cover duration-300 hidden" src="./img/Asoodle2.png" alt="">
+                </figure>
+            </div>
+        </header>
+        <!-- end menu  -->
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- desktop slider  -->
+                <div class="swiper-slide hidden md:flex">
+                    <img src="img/a.webp" alt="">
+                </div>
+                <div class="swiper-slide hidden md:flex">
+                    <img src="img/b.webp" alt="">
+                </div>
+                <div class="swiper-slide hidden md:flex">
+                    <img src="img/c.webp" alt="">
+                </div>
+                <div class="swiper-slide hidden md:flex">
+                    <img src="img/d.webp" alt="">
+                </div>
+                <!-- mobile slider  -->
+                <div class="swiper-slide flex md:hidden">
+                    <img src="img/photo-output.JPG" alt="">
+                </div>
+                <div class="swiper-slide flex md:hidden">
+                    <img src="img/photo-output (4).JPG" alt="">
+                </div>
+                <div class="swiper-slide flex md:hidden">
+                    <img src="img/photo-output (5).JPG" alt="">
+                </div>
+                <div class="swiper-slide flex md:hidden">
+                    <img src="img/photo-output (2).JPG" alt="">
+                </div>
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </nav>
+    <!-- second part  -->
+    <section class="w-full h-[220vh] md:h-[130vh] flex justify-center items-center flex-wrap  seconPart ">
+        <figure class="figurePart2 w-[90%] md:w-[27%] mx-8 md:my-5 relative">
+            <div class="w-full overflow-hidden">
+                <img class="w-full object-cover imgPart2 duration-300" src="img/7.jpeg" alt="">
+            </div>
+            <figcaption class="txtPart2 flex justify-start items-center text-[20px] mt-4 text-[#222] mr-2 ">
+                <span class="duration-300">شمع مینیمال</span>
+                <span
+                    class="line w-[60px] h-[1.5px] bg-white mr-2 flex justify-center items-center duration-300"></span>
+            </figcaption>
+            <div class="w-[200px] h-[200px] absolute -top-16 -right-14 flex justify-center items-center circle  text-[#222] text-[12px] font-bold"
+                id="text">
+                - ASOUDLE - CANDLE - ASOUDLE - CANDLE
+            </div>
+        </figure>
+        <figure class="figurePart2 w-[90%] md:w-[27%] mx-8 md:my-5 md:mt-36 ">
+            <div class="w-full overflow-hidden">
+                <img class="w-full object-cover imgPart2 duration-300 " src="img/6.png" alt="">
+            </div>
+            <figcaption class="txtPart2 flex justify-start items-center text-[20px] mt-4 text-[#222] mr-2 ">
+                <span class="duration-300">شمع صدف</span>
+                <span
+                    class="line w-[60px] h-[1.5px] bg-white mr-2 flex justify-center items-center duration-300"></span>
+            </figcaption>
+        </figure>
+        <figure class="figurePart2 w-[90%] md:w-[27%] mx-8 md:my-5 md:mt-72 ">
+            <div class="w-full overflow-hidden">
+                <img class="w-full object-cover imgPart2 duration-300 " src="img/photo-output (3).JPG" alt="">
+            </div>
+            <figcaption class="txtPart2 flex justify-start items-center text-[20px] mt-4 text-[#222] mr-2 ">
+                <span class="duration-300">شمع استوانه</span>
+                <span
+                    class="line w-[60px] h-[1.5px] bg-white mr-2 flex justify-center items-center duration-300"></span>
+            </figcaption>
+
+        </figure>
+    </section>
+    <!-- end second part  -->
+    <!-- start third part  -->
+    <!-- desktop  -->
+    <section
+        class="mb-[100px] md:mb-0 w-full h-[75vh] md:h-[60vh] flex justify-center items-center bg-[#fff] flex-wrap">
+        <h3 class="w-full flex justify-center items-center my-3 text-[#222] text-[22px] md:text-[30px]">جدیدترین
+            محصولات</h3>
+        <div class="swiper mySwiper2 h-[70%] my-4 mx-3 hidden md:flex">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide cursor-pointer overflow-hidden">
+                    <img src="img/photo-output (3).JPG" alt="">
+                </div>
+                <div class="swiper-slide cursor-pointer  overflow-hidden">
+                    <img src="img/photo-output (2).JPG" alt="">
+                </div>
+                <div class="swiper-slide cursor-pointer  overflow-hidden">
+                    <img src="img/photo-output (1).JPG" alt="">
+                </div>
+                <div class="swiper-slide cursor-pointer overflow-hidden">
+                    <img src="img/photo-output (1).JPEG" alt="">
+                </div>
+                <div class="swiper-slide cursor-pointer overflow-hidden">
+                    <img src="img/IMG_7432.JPG" alt="">
+                </div>
+                <div class="swiper-slide cursor-pointer overflow-hidden">
+                    <img src="img/IMG_7430.JPG" alt="">
+                </div>
+                <div class="swiper-slide cursor-pointer overflow-hidden">
+                    <img src="img/photo-output (5).JPG" alt="">
+                </div>
+                <div class="swiper-slide cursor-pointer overflow-hidden">
+                    <img src="img/IMG_5226.jpg" alt="">
+                </div>
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+        <!-- mobile  -->
+        <div class="swiper mySwiper3 h-full flex justify-center md:hidden">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide cursor-pointer overflow-hidden">
+                    <img src="img/photo-output (3).JPG" alt="">
+                </div>
+                <div class="swiper-slide cursor-pointer overflow-hidden">
+                    <img src="img/photo-output (2).JPG" alt="">
+                </div>
+                <div class="swiper-slide cursor-pointer overflow-hidden">
+                    <img src="img/photo-output (1).JPG" alt="">
+                </div>
+                <div class="swiper-slide cursor-pointer overflow-hidden">
+                    <img src="img/photo-output (1).JPEG" alt="">
+                </div>
+                <div class="swiper-slide cursor-pointer overflow-hidden">
+                    <img src="img/IMG_7432.JPG" alt="">
+                </div>
+                <div class="swiper-slide cursor-pointer overflow-hidden">
+                    <img src="img/IMG_7430.JPG" alt="">
+                </div>
+                <div class="swiper-slide cursor-pointer overflow-hidden">
+                    <img src="img/photo-output (5).JPG" alt="">
+                </div>
+                <div class="swiper-slide cursor-pointer overflow-hidden">
+                    <img src="img/IMG_5226.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!-- end third part  -->
+    <!-- start the forth part  -->
+
+
+
+
+    <!-- footer  -->
+    <footer
+        class="w-full h-[40vh] md:h-[35vh] -my-2 flex justify-center items-center bg-[url('img/footer-bg.png')] bg-no-repeat	bg-right bg-[#222]">
+        <div class="flex w-full h-[90%] md:h-full justify-center items-center flex-wrap">
+            <ul class="w-[80%] h-[80%] flex justify-center content-center flex-wrap">
+                <li class="w-full flex justify-center content-center flex-wrap">
+                    <img class="w-[200px] md:w-[250px] object-cover " src="img/Asoodle.png" alt="">
+                    <p class="text-[14px] text-white w-full flex justify-center items-center p-2"> اینجا خاص ترین و به روزترین شمع های دنیا رو پیدا میکنی، چرا من 😎 ؟ چون حتی اکر شمعی رو دوست نداشتی میتونی برگردونی ❣️</p>
+                </li>
+                <li class="w-full flex justify-center items-center">
+                    <h5 class="w-full flex justify-center items-center text-white text-[20px] p-2">شبکه های اجتماعی ما</h5>
+                </li>
+                <li class="w-full flex justify-center items-center">
+                    <ul class="w-full flex justify-center items-center">
+                        <li class="mx-2 my-3">
+                            <a href="https://instagram.com/asoodle_candle?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"
+                                class="text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-instagram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="mx-2 my-3">
+                            <a href="https://t.me/asoodle" target="_blank" class="text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                    class="bi bi-telegram" viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z" />
+                                </svg>
+
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="w-full h-[50px] flex justify-center items-center ">
+                <h6 class="text-white">Developed by <a href="#"> Saba Aghajani</a></h6>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="./master.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+<script>
+    var swiper = new Swiper(".mySwiper2", {
+        slidesPerView: 5,
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+</script>
+<script>
+    var swiper = new Swiper(".mySwiper3", {
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+    });
+</script>
+</script>
+
+</html>
